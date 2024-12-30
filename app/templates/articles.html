@@ -1,0 +1,13 @@
+<!-- articles.html -->
+{% extends 'base.html' %} {% block content %}
+<h1>Articles</h1>
+<div class="article-list">
+  {% for article in articles %}
+  <div class="article">
+    <h2><a href="{{ article.url }}">{{ article.title }}</a></h2>
+    <p>{{ article.summary }}</p>
+    <p><small>Published on: {{ article.date }}</small></p>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
